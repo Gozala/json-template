@@ -17,7 +17,7 @@
 ref=$(<.git/HEAD)
 branch=${ref##ref: refs/heads/}
 
-if [ $branch == "hg" ]; then
+if [ $branch == "sync" ]; then
     origin=$(pwd)
     root=$origin; while [ ! -d "$root/.git" ]; do root="$root/.."; done
     file=$root/lib/json-template/json-template.js
