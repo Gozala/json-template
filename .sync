@@ -16,12 +16,12 @@
 #. /usr/share/doc/git-core/contrib/hooks/post-receive-email
 ref=$(<.git/HEAD)
 branch=${ref##ref: refs/heads/}
-
 if [ $branch == "sync" ]; then
     origin=$(pwd)
     root=$origin; while [ ! -d "$root/.git" ]; do root="$root/.."; done
     file=$root/lib/json-template/json-template.js
     wget -qO- http://json-template.googlecode.com/hg/javascript/json-template.js > $file;
+    msg=$(wget -qO- http://code.google.com/feeds/p/json-template/hgchanges/basic | grep -E "(<title>|<title>)" -m "2" -)
     git add $file
-    git commit -m $(wget -qO- http://code.google.com/feeds/p/json-template/hgchanges/basic | grep -E "(<title>|<title>)" -m "2" -)
+    git commit -m "$msg"
 fi;
