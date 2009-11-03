@@ -1,5 +1,5 @@
 var assert = require("test/assert"),
-    Template = require("json-template/json-template").Template;
+    Template = require("json-template").Template;
 
 exports.testSimpleData = function() {
     assert.isEqual(Template("Hello {name}, how are you").expand({'name': 'Andy'}), "Hello Andy, how are you");
