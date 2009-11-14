@@ -1,0 +1,10 @@
+--- json-template-1.js	2009-11-14 03:34:19.000000000 -0500
++++ json-template-2.js	2009-11-14 03:34:55.000000000 -0500
+@@ -527,3 +527,7 @@
+ return {Template: Template, HtmlEscape: HtmlEscape};
+ 
+ }();
++
++// Make it a CommonJS module
++for (var key in jsontemplate) exports[key] = jsontemplate[key];
++
