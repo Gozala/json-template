@@ -1,19 +1,24 @@
 {
-    "name": "json-template",
-    "description": "Minimal but powerful templating language implemented in multiple languages.",
-    "keywords": [
-        "template",
-        "json"
-    ],
-    "author": "Andy Chu (andy@chubot.org)",
-    "contributors": [
-        "Irakli Gozalishvili (http://rfobic.wordpress.com/)"
-    ],
-    "lib": "lib",
-    "main": "lib/json-template.js",
-    "license": [
-        "Apache License 2.0"
-    ],
-    "dependencies": [
-    ]
+  "name": "json-template",
+  "version": "0.8.0",
+  "description": "Minimal but powerful templating language implemented in multiple languages.",
+  "keywords": [
+    "template",
+    "json"
+  ],
+  "author": "Andy Chu (andy@chubot.org)",
+  "contributors": [
+    "Irakli Gozalishvili <rfobic@gmail.com> "
+  ],
+  "main": "./json-template.js",
+  "devDependencies": {
+    "test": ">=0.2.0"
+  },
+  "scripts": {
+    "test": "node tests/all-tests.js"
+  },
+  "license": {
+    "type": "Apache License 2.0",
+    "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+  }
 }

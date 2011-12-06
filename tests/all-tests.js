@@ -1,5 +1,7 @@
-exports.testSimple = require("./testSimple");
-exports.testSubstitutions = require("./testSubstitutions");
-if (require.main === module.id)
-    require("os").exit(require("test/runner").run(exports));
+"use strict"
 
+exports['test simple'] = require("./testSimple")
+exports['test substitutions'] = require("./testSubstitutions")
+
+if (module == require.main)
+  require('test').run(exports)
