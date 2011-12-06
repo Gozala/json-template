@@ -10,8 +10,9 @@
         "Irakli Gozalishvili (http://rfobic.wordpress.com/)"
     ],
     "lib": "lib",
+    "main": "lib/json-template.js",
     "license": [
-        "Apache License 2.0",
+        "Apache License 2.0"
     ],
     "dependencies": [
     ]
